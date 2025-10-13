@@ -26,31 +26,28 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
             padding: 20px;
         }
 
         .container {
-            max-width: 800px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
-            padding: 60px 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            animation: fadeIn 1s ease-out;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
-        @keyframes fadeIn {
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        @keyframes fadeInDown {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(-30px);
             }
             to {
                 opacity: 1;
@@ -59,270 +56,299 @@
         }
 
         .logo {
-            text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .logo svg {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: auto;
             fill: #e82127;
-            filter: drop-shadow(0 4px 20px rgba(232, 33, 39, 0.4));
-            animation: pulse 2s ease-in-out infinite;
+            transition: transform 0.3s ease;
         }
 
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
+        .logo svg:hover {
+            transform: scale(1.05);
         }
 
         h1 {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #ffffff 0%, #e82127 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
+            font-size: 3em;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -1px;
         }
 
         .subtitle {
-            text-align: center;
             font-size: 1.3em;
-            color: #cccccc;
-            margin-bottom: 40px;
-            font-weight: 500;
+            color: #666;
+            font-weight: 400;
         }
 
-        .highlight-box {
+        .highlight-section {
             background: linear-gradient(135deg, #e82127 0%, #c41e22 100%);
-            border-radius: 16px;
-            padding: 35px;
-            margin-bottom: 40px;
-            box-shadow: 0 15px 40px rgba(232, 33, 39, 0.5);
-            text-align: center;
-            animation: glow 2s ease-in-out infinite;
+            border-radius: 20px;
+            padding: 50px 40px;
+            margin: 60px 0;
+            box-shadow: 0 20px 60px rgba(232, 33, 39, 0.2);
+            animation: fadeIn 1s ease-out;
         }
 
-        @keyframes glow {
-            0%, 100% {
-                box-shadow: 0 15px 40px rgba(232, 33, 39, 0.5);
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            50% {
-                box-shadow: 0 15px 60px rgba(232, 33, 39, 0.8);
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        .highlight-box h2 {
-            font-size: 2em;
-            margin-bottom: 25px;
+        .highlight-section h2 {
             color: #ffffff;
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
         }
 
-        .main-benefits {
+        .benefits-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
         }
 
         .benefit-card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
-            padding: 25px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            cursor: pointer;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
             transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
         .benefit-card:hover {
-            transform: scale(1.05);
-            border-color: rgba(255, 255, 255, 0.6);
-            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         .benefit-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
+            font-size: 4em;
+            margin-bottom: 20px;
+            display: block;
         }
 
         .benefit-card h3 {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            color: #ffffff;
+            font-size: 1.8em;
+            color: #e82127;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .benefit-card p {
             font-size: 1.1em;
-            line-height: 1.5;
-            color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
         }
 
-        @media (max-width: 768px) {
-            .main-benefits {
-                grid-template-columns: 1fr;
-            }
+        .info-section {
+            background: #f8f8f8;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            border-left: 5px solid #e82127;
         }
 
-        .benefits {
-            background: rgba(232, 33, 39, 0.1);
-            border-left: 4px solid #e82127;
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 30px;
+        .info-section h2 {
+            color: #1a1a1a;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            font-weight: 700;
         }
 
-        .benefits h2 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #e82127;
-        }
-
-        .benefits ul {
+        .info-section ul {
             list-style: none;
             padding: 0;
         }
 
-        .benefits li {
-            padding: 10px 0;
-            padding-left: 30px;
+        .info-section li {
+            padding: 12px 0;
+            padding-left: 35px;
             position: relative;
-            font-size: 1em;
-            line-height: 1.6;
+            font-size: 1.1em;
+            color: #333;
         }
 
-        .benefits li:before {
+        .info-section li:before {
             content: "✓";
             position: absolute;
             left: 0;
             color: #e82127;
             font-weight: bold;
-            font-size: 1.3em;
+            font-size: 1.4em;
         }
 
-        .contact-button {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 15px 40px;
-            font-size: 1.1em;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 50px;
-            border: 2px solid #ffffff;
-            transition: all 0.3s ease;
-            margin-top: 20px;
+        .steps-section {
+            margin: 60px 0;
         }
 
-        .contact-button:hover {
-            background: #ffffff;
-            color: #000000;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
-        }
-
-        .steps {
-            margin: 40px 0;
-        }
-
-        .steps h2 {
-            font-size: 1.8em;
-            margin-bottom: 25px;
+        .steps-section h2 {
+            font-size: 2.2em;
             text-align: center;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+            font-weight: 700;
         }
 
         .step {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #ffffff;
+            border: 2px solid #f0f0f0;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
         }
 
         .step:hover {
-            background: rgba(255, 255, 255, 0.08);
+            border-color: #e82127;
+            box-shadow: 0 10px 30px rgba(232, 33, 39, 0.1);
             transform: translateX(5px);
         }
 
         .step-number {
-            display: inline-block;
             background: #e82127;
             color: white;
-            width: 35px;
-            height: 35px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            text-align: center;
-            line-height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: bold;
-            margin-right: 15px;
+            font-size: 1.5em;
+            flex-shrink: 0;
         }
 
         .step-content {
-            display: inline-block;
-            vertical-align: middle;
-            width: calc(100% - 60px);
+            flex: 1;
+        }
+
+        .step-content strong {
+            display: block;
+            font-size: 1.3em;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .step-content p {
+            color: #666;
+            font-size: 1.05em;
+            line-height: 1.7;
         }
 
         .cta-section {
             text-align: center;
-            margin-top: 50px;
+            margin: 80px 0 60px;
         }
 
         .cta-button {
             display: inline-block;
             background: linear-gradient(135deg, #e82127 0%, #c41e22 100%);
             color: white;
-            padding: 20px 50px;
-            font-size: 1.3em;
-            font-weight: bold;
+            padding: 22px 60px;
+            font-size: 1.4em;
+            font-weight: 700;
             text-decoration: none;
             border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(232, 33, 39, 0.4);
+            box-shadow: 0 15px 40px rgba(232, 33, 39, 0.3);
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            border: none;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(232, 33, 39, 0.6);
-            border: 2px solid #ffffff;
+            box-shadow: 0 20px 50px rgba(232, 33, 39, 0.4);
         }
 
-        .cta-button:active {
-            transform: translateY(-1px);
+        .contact-button {
+            display: inline-block;
+            background: #ffffff;
+            color: #e82127;
+            padding: 18px 45px;
+            font-size: 1.2em;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid #e82127;
+            transition: all 0.3s ease;
+            margin-top: 25px;
         }
 
-        .note {
+        .contact-button:hover {
+            background: #e82127;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(232, 33, 39, 0.2);
+        }
+
+        .footer-note {
             text-align: center;
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #999;
-            font-style: italic;
+            margin-top: 60px;
+            padding: 30px;
+            background: #f8f8f8;
+            border-radius: 16px;
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        .footer-note strong {
+            color: #1a1a1a;
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 40px 25px;
-            }
-
             h1 {
                 font-size: 2em;
             }
 
             .subtitle {
-                font-size: 1em;
+                font-size: 1.1em;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .highlight-section {
+                padding: 35px 25px;
+            }
+
+            .highlight-section h2 {
+                font-size: 1.7em;
+            }
+
+            .step {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
 
             .cta-button {
-                padding: 18px 40px;
-                font-size: 1.1em;
+                padding: 20px 40px;
+                font-size: 1.2em;
+            }
+
+            .info-section {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -334,36 +360,33 @@
     <!-- End Google Tag Manager (noscript) -->
     
     <div class="container">
-        <div class="logo">
-            <svg viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z"/>
-            </svg>
+        <div class="header">
+            <div class="logo">
+                <svg viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z"/>
+                </svg>
+            </div>
+            <h1>Referral Tesla Ottobre 2025</h1>
+            <p class="subtitle">Model 3, Model Y, Model S e Model X - Vantaggi Esclusivi per il Tuo Ordine</p>
         </div>
 
-        <h1>Referral Tesla Ottobre 2025</h1>
-        <p class="subtitle">Model 3, Model Y, Model S e Model X - Vantaggi Esclusivi per il Tuo Ordine</p>
-
-        <div class="highlight-box">
+        <div class="highlight-section">
             <h2>🎁 Vantaggi Immediati con il Referral Tesla</h2>
-            <div class="main-benefits">
-                <a href="#cta-ordina" style="text-decoration: none; color: inherit;">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">⚡</div>
-                        <h3>1000 km Gratis</h3>
-                        <p>1000 chilometri di ricariche gratuite alle stazioni Supercharger Tesla per model 3 e model Y</p>
-                    </div>
+            <div class="benefits-grid">
+                <a href="#cta-ordina" class="benefit-card">
+                    <span class="benefit-icon">⚡</span>
+                    <h3>1000 km Gratis</h3>
+                    <p>1000 chilometri di ricariche gratuite alle stazioni Supercharger Tesla per Model 3 e Model Y</p>
                 </a>
-                <a href="#cta-ordina" style="text-decoration: none; color: inherit;">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">💰</div>
-                        <h3>OPPURE 500€ Sconto</h3>
-                        <p>500 euro di sconto immediato sul prezzo d'acquisto del tuo veicolo model s e model X</p>
-                    </div>
+                <a href="#cta-ordina" class="benefit-card">
+                    <span class="benefit-icon">💰</span>
+                    <h3>500€ di Sconto</h3>
+                    <p>500 euro di sconto immediato sul prezzo d'acquisto del tuo veicolo Model S e Model X</p>
                 </a>
             </div>
         </div>
 
-        <div class="benefits">
+        <div class="info-section">
             <h2>✨ Vantaggi Aggiuntivi del Referral Tesla</h2>
             <ul>
                 <li><strong>Supporto gratuito personalizzato</strong> per la configurazione del tuo ordine Tesla Model 3 o Model Y</li>
@@ -373,38 +396,38 @@
             </ul>
         </div>
 
-        <div class="steps">
+        <div class="steps-section">
             <h2>📋 Come Usare il Referral Tesla in 4 Semplici Passi</h2>
             
             <div class="step">
-                <span class="step-number">1</span>
+                <div class="step-number">1</div>
                 <div class="step-content">
-                    <strong>Clicca sul pulsante rosso "ORDINA CON REFERRAL TESLA"</strong><br>
-                    Verrai reindirizzato al sito ufficiale Tesla con il codice referral già applicato automaticamente
+                    <strong>Clicca sul pulsante rosso "ORDINA CON REFERRAL TESLA"</strong>
+                    <p>Verrai reindirizzato al sito ufficiale Tesla con il codice referral già applicato automaticamente</p>
                 </div>
             </div>
 
             <div class="step">
-                <span class="step-number">2</span>
+                <div class="step-number">2</div>
                 <div class="step-content">
-                    <strong>Scegli il tuo modello Tesla</strong><br>
-                    Tesla Model 3, Model Y, Model S o Model X - seleziona quello perfetto per te
+                    <strong>Scegli il tuo modello Tesla</strong>
+                    <p>Tesla Model 3, Model Y, Model S o Model X - seleziona quello perfetto per te</p>
                 </div>
             </div>
 
             <div class="step">
-                <span class="step-number">3</span>
+                <div class="step-number">3</div>
                 <div class="step-content">
-                    <strong>Configura il veicolo secondo le tue preferenze</strong><br>
-                    Personalizza colore, interni, ruote e opzioni. Hai bisogno di aiuto? Contattami per supporto gratuito!
+                    <strong>Configura il veicolo secondo le tue preferenze</strong>
+                    <p>Personalizza colore, interni, ruote e opzioni. Hai bisogno di aiuto? Contattami per supporto gratuito!</p>
                 </div>
             </div>
 
             <div class="step">
-                <span class="step-number">4</span>
+                <div class="step-number">4</div>
                 <div class="step-content">
-                    <strong>Completa l'ordine e ottieni i vantaggi</strong><br>
-                    Ottieni 1000 km di ricariche Supercharger gratuite (pet Model 3 o Model Y) o 500€ di sconto immediato (per Model S o Model X)
+                    <strong>Completa l'ordine e ottieni i vantaggi</strong>
+                    <p>Ottieni 1000 km di ricariche Supercharger gratuite (per Model 3 o Model Y) o 500€ di sconto immediato (per Model S o Model X)</p>
                 </div>
             </div>
         </div>
@@ -414,14 +437,14 @@
                 🚗 ORDINA CON REFERRAL TESLA
             </a>
                         
-            <div style="margin-top: 30px;">
+            <div>
                 <a href="mailto:nicola.petrosino@gmail.com?subject=Richiesta Supporto Referral Tesla&body=Ciao, ho bisogno di supporto per l'ordine della mia Tesla tramite referral." class="contact-button">
                     ✉️ CONTATTAMI PER SUPPORTO GRATUITO
                 </a>
             </div>
         </div>
 
-        <div class="note" style="margin-top: 50px;">
+        <div class="footer-note">
             <strong>Referral Tesla ottobre 2025:</strong> I vantaggi del programma referral Tesla per Model 3, Model Y, Model S e Model X possono variare nel tempo.<br>
             Verifica sempre i dettagli aggiornati sul sito ufficiale Tesla. Valido per ordini in Italia.
         </div>
