@@ -42,6 +42,7 @@
     <meta property="og:title" content="Referral Tesla Ottobre 2025 - 1000 km Gratis o 500€ Sconto">
     <meta property="og:description" content="Ottieni 1000 km di ricariche gratuite Supercharger o 500€ di sconto sul tuo ordine Tesla">
     <meta property="og:type" content="website">
+    
     <style>
         * {
             margin: 0;
@@ -54,7 +55,7 @@
             background: #ffffff;
             color: #1a1a1a;
             line-height: 1.6;
-            padding: 20px;
+            overflow-x: hidden;
         }
 
         .container {
@@ -63,10 +64,65 @@
             padding: 40px 20px;
         }
 
+        /* Countdown Timer */
+        .countdown-banner {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .countdown-banner p {
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .countdown-number {
+            background: #e82127;
+            padding: 8px 15px;
+            border-radius: 8px;
+            min-width: 50px;
+        }
+
+        .countdown-label {
+            font-size: 0.7em;
+            margin-top: 5px;
+            opacity: 0.8;
+        }
+
         .header {
             text-align: center;
             margin-bottom: 60px;
             animation: fadeInDown 0.8s ease-out;
+            padding-top: 40px;
         }
 
         @keyframes fadeInDown {
@@ -95,6 +151,18 @@
             transform: scale(1.05);
         }
 
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #1a1a1a;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
         h1 {
             font-size: 3em;
             color: #1a1a1a;
@@ -109,6 +177,37 @@
             font-weight: 400;
         }
 
+        .social-proof {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 25px;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 15px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .social-proof-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-proof-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #e82127;
+        }
+
+        .social-proof-text {
+            font-size: 0.9em;
+            color: #666;
+        }
+
         .highlight-section {
             background: linear-gradient(135deg, #e82127 0%, #c41e22 100%);
             border-radius: 20px;
@@ -116,6 +215,30 @@
             margin: 60px 0;
             box-shadow: 0 20px 60px rgba(232, 33, 39, 0.2);
             animation: fadeIn 1s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-section::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
         }
 
         @keyframes fadeIn {
@@ -135,6 +258,8 @@
             text-align: center;
             margin-bottom: 40px;
             font-weight: 700;
+            position: relative;
+            z-index: 1;
         }
 
         .benefits-grid {
@@ -142,6 +267,8 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-top: 30px;
+            position: relative;
+            z-index: 1;
         }
 
         .benefit-card {
@@ -158,7 +285,7 @@
         }
 
         .benefit-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-8px) scale(1.02);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
@@ -179,6 +306,126 @@
             font-size: 1.1em;
             color: #333;
             line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            margin: 60px 0;
+            padding: 50px 40px;
+            background: #1a1a1a;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #e82127;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e82127 0%, #c41e22 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        .testimonial-info h4 {
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .testimonial-model {
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        .testimonial-text {
+            line-height: 1.8;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        /* FAQ */
+        .faq-section {
+            margin: 60px 0;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+        }
+
+        .faq-item {
+            background: white;
+            border: 2px solid #f0f0f0;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: #e82127;
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            font-weight: 700;
+            font-size: 1.2em;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .faq-answer {
+            padding: 0 30px 25px;
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.05em;
         }
 
         .info-section {
@@ -281,7 +528,7 @@
 
         .cta-section {
             text-align: center;
-            margin: 80px 0 60px;
+            margin: 50px 0;
         }
 
         .cta-button {
@@ -296,6 +543,27 @@
             box-shadow: 0 15px 40px rgba(232, 33, 39, 0.3);
             transition: all 0.3s ease;
             border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
         }
 
         .cta-button:hover {
@@ -340,6 +608,16 @@
         }
 
         @media (max-width: 768px) {
+            .countdown {
+                gap: 10px;
+                font-size: 1.1em;
+            }
+
+            .countdown-number {
+                padding: 6px 10px;
+                min-width: 40px;
+            }
+
             h1 {
                 font-size: 2em;
             }
@@ -372,8 +650,13 @@
                 font-size: 1.2em;
             }
 
-            .info-section {
+            .info-section, .testimonials-section {
                 padding: 30px 20px;
+            }
+
+            .social-proof {
+                flex-direction: column;
+                gap: 20px;
             }
         }
     </style>
@@ -384,6 +667,29 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
+    <!-- Countdown Banner -->
+    <div class="countdown-banner">
+        <p>⏰ Offerta Limitata - Termina tra:</p>
+        <div class="countdown" id="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">14</div>
+                <div class="countdown-label">Giorni</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">23</div>
+                <div class="countdown-label">Ore</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">59</div>
+                <div class="countdown-label">Minuti</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">59</div>
+                <div class="countdown-label">Secondi</div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="header">
             <div class="logo">
@@ -391,8 +697,23 @@
                     <path d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z"/>
                 </svg>
             </div>
+            <div class="badge">🏆 Proprietario Tesla Verificato dal 2023</div>
             <h1>Referral Tesla Ottobre 2025</h1>
             <p class="subtitle">Model 3, Model Y, Model S e Model X - Vantaggi Esclusivi per il Tuo Ordine</p>
+            <div class="social-proof">
+                <div class="social-proof-item">
+                    <div class="social-proof-number">16</div>
+                    <div class="social-proof-text">Ordini completati</div>
+                </div>
+                <div class="social-proof-item">
+                    <div class="social-proof-number">4.9</div>
+                    <div class="social-proof-text">Rating medio</div>
+                </div>
+                <div class="social-proof-item">
+                    <div class="social-proof-number">100%</div>
+                    <div class="social-proof-text">Clienti soddisfatti</div>
+                </div>
+            </div>
         </div>
 
         <div class="highlight-section">
@@ -412,11 +733,66 @@
         </div>
 
         <div class="cta-section" id="cta-ordina">
-            <a href="https://www.tesla.com/it_it/referral/nicola722048" class="cta-button" target="_blank">
+            <a href="https://www.tesla.com/it_it/referral/nicola722048" class="cta-button" target="_blank" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Main CTA Top'});">
                 🚗 ORDINA CON REFERRAL TESLA
             </a>
         </div>
-        
+
+        <!-- Testimonials Section -->
+        <div class="testimonials-section">
+            <h2>⭐ Cosa Dicono i Clienti</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-info">
+                            <h4>Marco R.</h4>
+                            <div class="testimonial-model">Tesla Model 3 Long Range</div>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Nicola è stato super disponibile e mi ha guidato passo passo nella configurazione. I 1000 km gratuiti sono stati applicati immediatamente. Consigliatissimo!"
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">G</div>
+                        <div class="testimonial-info">
+                            <h4>Giulia S.</h4>
+                            <div class="testimonial-model">Tesla Model Y Performance</div>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Grazie al referral ho risparmiato e ho ricevuto consigli preziosi sulla scelta degli accessori. Servizio impeccabile!"
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">A</div>
+                        <div class="testimonial-info">
+                            <h4>Andrea P.</h4>
+                            <div class="testimonial-model">Tesla Model 3 Standard</div>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Processo semplicissimo. Ho cliccato sul link, configurato la mia Model 3 e i km gratuiti erano già nel mio account. Perfetto!"
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA dopo Testimonianze -->
+        <div class="cta-section">
+            <a href="https://www.tesla.com/it_it/referral/nicola722048" class="cta-button" target="_blank" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'After Testimonials'});">
+                🚗 ORDINA CON REFERRAL TESLA
+            </a>
+        </div>
+
         <div class="info-section">
             <h2>✨ Vantaggi Aggiuntivi del Referral Tesla</h2>
             <ul>
@@ -424,7 +800,15 @@
                 <li><strong>Consulenza diretta</strong> per scegliere il modello perfetto per le tue esigenze</li>
                 <li>Assistenza nella selezione di <strong>accessori e optional</strong></li>
                 <li><strong>Valido per tutti i modelli</strong>: Model 3, Model Y, Model S e Model X</li>
+                <li><strong>Risposta entro 2 ore</strong> su WhatsApp per ogni domanda</li>
             </ul>
+        </div>
+
+        <!-- CTA dopo Vantaggi Aggiuntivi -->
+        <div class="cta-section">
+            <a href="https://www.tesla.com/it_it/referral/nicola722048" class="cta-button" target="_blank" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'After Benefits'});">
+                🚗 ORDINA CON REFERRAL TESLA
+            </a>
         </div>
 
         <div class="steps-section">
@@ -463,13 +847,79 @@
             </div>
         </div>
 
-        <div class="cta-section" id="cta-contatti">
-            <a href="https://www.tesla.com/it_it/referral/nicola722048" class="cta-button" target="_blank">
+        <!-- CTA dopo Come Usare il Referral -->
+        <div class="cta-section">
+            <a href="https://www.tesla.com/it_it/referral/nicola722048" class="cta-button" target="_blank" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'After Steps'});">
                 🚗 ORDINA CON REFERRAL TESLA
             </a>
-                        
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>❓ Domande Frequenti</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Il referral ha una scadenza?
+                </div>
+                <div class="faq-answer">
+                    L'offerta è valida fino al 31 ottobre 2025. Dopo questa data, i vantaggi potrebbero cambiare. Ti consiglio di approfittarne subito!
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Posso combinare il referral con altri sconti Tesla?
+                </div>
+                <div class="faq-answer">
+                    Sì! Il referral è cumulabile con altre promozioni Tesla attive. Puoi massimizzare il risparmio combinando più offerte.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quando ricevo i 1000 km gratuiti?
+                </div>
+                <div class="faq-answer">
+                    I crediti Supercharger vengono applicati automaticamente al tuo account Tesla entro pochi giorni dalla consegna del veicolo. Potrai usarli subito per ricaricare.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Il supporto è davvero gratuito?
+                </div>
+                <div class="faq-answer">
+                    Assolutamente sì! Come proprietario Tesla appassionato, offro supporto gratuito via WhatsApp per aiutarti a configurare al meglio il tuo veicolo. Nessun costo nascosto.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Cosa succede se non uso il referral?
+                </div>
+                <div class="faq-answer">
+                    Senza referral perdi i 1000 km gratuiti o i 500€ di sconto e non avrai accesso al mio supporto personalizzato. È un vantaggio importante che vale la pena utilizzare!
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Il referral funziona per veicoli usati?
+                </div>
+                <div class="faq-answer">
+                    No, il programma referral Tesla è valido solo per l'acquisto di veicoli nuovi direttamente da Tesla. Non si applica a veicoli usati o di seconda mano.
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section" id="cta-contatti">
+            <a href="https://www.tesla.com/it_it/referral/nicola722048" class="cta-button" target="_blank" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Main CTA Bottom'});">
+                🚗 ORDINA CON REFERRAL TESLA
+            </a>
+            
             <div>
-                <a href="https://wa.me/393935401286?text=Ciao%20Nicola%2C%20ho%20bisogno%20di%20supporto%20per%20l%27ordine%20della%20mia%20Tesla%20tramite%20referral." class="contact-button" target="_blank">
+                <a href="https://wa.me/393935401286?text=Ciao%20Nicola%2C%20ho%20bisogno%20di%20supporto%20per%20l%27ordine%20della%20mia%20Tesla%20tramite%20referral." class="contact-button" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Contact', 'event_label': 'WhatsApp Button'});">
                     💬 CONTATTAMI SU WHATSAPP
                 </a>
             </div>
@@ -477,8 +927,43 @@
 
         <div class="footer-note">
             <strong>Referral Tesla ottobre 2025:</strong> I vantaggi del programma referral Tesla per Model 3, Model Y, Model S e Model X possono variare nel tempo.<br>
-            Verifica sempre i dettagli aggiornati sul sito ufficiale Tesla. Valido per ordini in Italia.
+            Verifica sempre i dettagli aggiornati sul sito ufficiale Tesla. Valido per ordini in Italia.<br><br>
+            <strong>Nicola Petrosino</strong> - Proprietario Tesla Model 3 dal 2023 | Referral Code: nicola722048
         </div>
     </div>
+
+    <script>
+        // Countdown Timer
+        const countdownDate = new Date("October 31, 2025 23:59:59").getTime();
+        
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+            
+            if (distance < 0) {
+                document.querySelector('.countdown-banner').style.display = 'none';
+            }
+        };
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Event tracking function
+        window.gtag = window.gtag || function() {
+            if (window.dataLayer) {
+                window.dataLayer.push(arguments);
+            }
+        };
+    </script>
 </body>
 </html>
