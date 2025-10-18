@@ -696,6 +696,41 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
 }
+
+.ecobonus-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 11px 28px;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 22px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+    position: relative;
+    padding-right: 40px; /* Spazio per l'icona */
+}
+
+.ecobonus-btn::after {
+    content: "↗";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.ecobonus-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+}
+
+.ecobonus-btn:hover::after {
+    opacity: 1;
+}
+        
     </style>
 </head>
 <body>
