@@ -1108,17 +1108,60 @@
     </div>
 </div>
 
-        <div class="cta-section" id="cta-contatti">
-            <a href="https://www.tesla.com/it_it/referral/nicola722048" class="cta-button" target="_blank" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Main CTA Bottom'});">
-                🚗 ORDINA CON REFERRAL TESLA
+        <!-- Sostituisci la sezione CTA contatti con questa -->
+<div class="cta-section" id="cta-contatti">
+    <a href="https://www.tesla.com/it_it/referral/nicola722048" class="cta-button" target="_blank" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Main CTA Bottom'});">
+        🚗 ORDINA CON REFERRAL TESLA
+    </a>
+    
+    <div style="margin-top: 30px;">
+        <p style="font-size: 1.2em; margin-bottom: 15px; color: #666;">
+            Hai bisogno di supporto per l'ordine? <strong>Contattami:</strong>
+        </p>
+        
+        <a href="https://wa.me/393935401286?text=Ciao%20Nicola%2C%20ho%20bisogno%20di%20supporto%20per%20l%27ordine%20della%20mia%20Tesla%20tramite%20referral." 
+           class="contact-button" 
+           target="_blank"
+           onclick="return confirmContact(event, 'whatsapp')">
+            💬 CONTATTAMI SU WHATSAPP
+        </a>
+        
+        <div style="margin-top: 15px;">
+            <a href="mailto:tua-email@example.com?subject=Richiesta%20Referral%20Tesla" 
+               style="color: #0066cc; text-decoration: underline; font-size: 1em;"
+               onclick="gtag('event', 'click', {'event_category': 'Contact', 'event_label': 'Email Link'});">
+                Oppure scrivimi via email →
             </a>
-            
-            <div>
-                <a href="https://wa.me/393935401286?text=Ciao%20Nicola%2C%20ho%20bisogno%20di%20supporto%20per%20l%27ordine%20della%20mia%20Tesla%20tramite%20referral." class="contact-button" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Contact', 'event_label': 'WhatsApp Button'});">
-                    💬 CONTATTAMI SU WHATSAPP
-                </a>
-            </div>
         </div>
+        
+        <p style="font-size: 0.85em; margin-top: 15px; color: #999; font-style: italic;">
+            ⚡ Servizio di supporto attivo solo per ordini Tesla in Italia
+        </p>
+    </div>
+</div>
+
+<script>
+function confirmContact(event, type) {
+    if (type === 'whatsapp') {
+        const confirmed = confirm(
+            "🇮🇹 Questo servizio è riservato a ordini Tesla in Italia.\n\n" +
+            "Confermi di voler procedere?"
+        );
+        
+        if (confirmed) {
+            gtag('event', 'click', {
+                'event_category': 'Contact',
+                'event_label': 'WhatsApp Confirmed'
+            });
+            return true;
+        }
+        
+        event.preventDefault();
+        return false;
+    }
+    return true;
+}
+</script>
 
         <div class="footer-note">
             <strong>Referral Tesla ottobre 2025:</strong> I vantaggi del programma referral Tesla per Model 3, Model Y, Model S e Model X possono variare nel tempo.<br>
