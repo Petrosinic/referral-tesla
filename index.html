@@ -1223,6 +1223,179 @@ function confirmContact(event, type) {
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
+
+// Inizializza dataLayer
+        window.dataLayer = window.dataLayer || [];
+        
+        let chatbotOpened = false;
+        let firstInteraction = false;
+        
+        setTimeout(function() {
+          
+          const observeChatbot = setInterval(function() {
+            const launcher = document.querySelector('[class*="launcher"]') || 
+                           document.querySelector('[id*="voiceflow"]') ||
+                           document.querySelector('iframe[title*="voiceflow"]');
+            
+            if (launcher) {
+              clearInterval(observeChatbot);
+              
+              launcher.addEventListener('click', function() {
+                if (!chatbotOpened) {
+                  chatbotOpened = true;
+                  console.log('📊 Event: chatbot_opened');
+                  
+                  // Invia a GTM
+                  window.dataLayer.push({
+                    'event': 'chatbot_opened',
+                    'chatbot_action': 'widget_opened',
+                    'chatbot_label': 'Widget Opened',
+                    'value': 1
+                  });
+                }
+              });
+              
+              console.log('✅ Chatbot launcher trovato e tracking attivato');
+            }
+          }, 500);
+          
+          setTimeout(function() {
+            clearInterval(observeChatbot);
+          }, 10000);
+          
+          // Traccia click su link
+          document.addEventListener('click', function(e) {
+            const isInChatbot = e.target.closest('[class*="vf"]') || 
+                              e.target.closest('[class*="voiceflow"]') ||
+                              e.target.closest('iframe[title*="voiceflow"]');
+            
+            if (isInChatbot && e.target.tagName === 'A') {
+              const linkUrl = e.target.href;
+              const linkText = e.target.textContent.trim();
+              
+              console.log('📊 Event: chatbot_link_click', linkText, linkUrl);
+              
+              // Evento generico link
+              window.dataLayer.push({
+                'event': 'chatbot_link_click',
+                'chatbot_action': 'link_click',
+                'chatbot_label': linkText,
+                'link_url': linkUrl,
+                'value': 2
+              });
+              
+              // EVENTO SPECIALE: Link Referral Tesla
+              if (linkUrl.includes('tesla.com') && linkUrl.includes('referral')) {
+                console.log('🎯 CONVERSIONE: Referral Tesla cliccato!');
+                
+                window.dataLayer.push({
+                  'event': 'referral_link_clicked',
+                  'chatbot_action': 'conversion',
+                  'chatbot_label': 'Tesla Referral from Chatbot',
+                  'link_url': linkUrl,
+                  'value': 100
+                });
+              }
+              
+              // EVENTO SPECIALE: WhatsApp
+              if (linkUrl.includes('wa.me') || linkUrl.includes('whatsapp')) {
+                console.log('📱 WhatsApp link cliccato');
+                
+                window.dataLayer.push({
+                  'event': 'whatsapp_clicked',
+                  'chatbot_action': 'contact',
+                  'chatbot_label': 'WhatsApp from Chatbot',
+                  'link_url': linkUrl,
+                  'value': 50
+                });
+              }
+              
+              // EVENTO SPECIALE: Email
+              if (linkUrl.includes('mailto:')) {
+                console.log('📧 Email link cliccato');
+                
+                window.dataLayer.push({
+                  'event': 'email_clicked',
+                  'chatbot_action': 'contact',
+                  'chatbot_label': 'Email from Chatbot',
+                  'link_url': linkUrl,
+                  'value': 30
+                });
+              }
+              
+              // EVENTO SPECIALE: Ecobonus
+              if (linkUrl.includes('ecobonus') || linkUrl.includes('invitalia')) {
+                console.log('💰 Ecobonus link cliccato');
+                
+                window.dataLayer.push({
+                  'event': 'ecobonus_link_clicked',
+                  'chatbot_action': 'information',
+                  'chatbot_label': 'Ecobonus Link from Chatbot',
+                  'link_url': linkUrl,
+                  'value': 5
+                });
+              }
+            }
+          }, true);
+          
+          // Traccia click su pulsanti
+          document.addEventListener('click', function(e) {
+            const isInChatbot = e.target.closest('[class*="vf"]') || 
+                              e.target.closest('[class*="voiceflow"]');
+            
+            if (isInChatbot && e.target.tagName === 'BUTTON') {
+              const buttonText = e.target.textContent.trim();
+              
+              console.log('📊 Event: chatbot_button_click', buttonText);
+              
+              window.dataLayer.push({
+                'event': 'chatbot_button_click',
+                'chatbot_action': 'button_click',
+                'chatbot_label': buttonText,
+                'value': 1
+              });
+              
+              // Pulsanti speciali
+              if (buttonText.toLowerCase().includes('ordina') || 
+                  buttonText.toLowerCase().includes('referral')) {
+                window.dataLayer.push({
+                  'event': 'order_button_clicked',
+                  'chatbot_action': 'conversion_intent',
+                  'chatbot_label': buttonText,
+                  'value': 20
+                });
+              }
+            }
+          }, true);
+          
+          // Traccia prima interazione
+          document.addEventListener('keypress', function(e) {
+            const isInChatbot = e.target.closest('[class*="vf"]') || 
+                              e.target.closest('[class*="voiceflow"]');
+            
+            if (isInChatbot && !firstInteraction) {
+              firstInteraction = true;
+              console.log('📊 Event: chatbot_first_interaction');
+              
+              window.dataLayer.push({
+                'event': 'chatbot_first_interaction',
+                'chatbot_action': 'user_typing',
+                'chatbot_label': 'User Started Typing',
+                'value': 3
+              });
+            }
+          });
+          
+          console.log('✅ Tracking Voiceflow GTM completamente attivato');
+          
+        }, 2000);
+        
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
+      v.type = "text/javascript"; 
+      s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
     
 </body>
 </html>
