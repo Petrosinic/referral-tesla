@@ -1171,6 +1171,183 @@ function confirmContact(event, type) {
             <strong>Proprietario Tesla Model 3 dal 2023</strong> | Referral Code: nicola722048
         </div>
     </div>
+
+<!-- Voiceflow Widget con Tracking Completo -->
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6903aaeffb7b51127f5f6fcb' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          assistant: {
+            title: 'Assistente Referral Tesla',
+            color: '#e82127',
+            avatar: '',
+            launcher: '💬',
+            audio: false,
+            tts: false,
+            speech: false
+          }
+        });
+        
+        console.log('🔍 Voiceflow tracking inizializzato');
+        
+        let chatbotOpened = false;
+        let firstInteraction = false;
+        
+        setTimeout(function() {
+          
+          const observeChatbot = setInterval(function() {
+            const launcher = document.querySelector('[class*="launcher"]') || 
+                           document.querySelector('[id*="voiceflow"]') ||
+                           document.querySelector('iframe[title*="voiceflow"]');
+            
+            if (launcher) {
+              clearInterval(observeChatbot);
+              
+              launcher.addEventListener('click', function() {
+                if (!chatbotOpened) {
+                  chatbotOpened = true;
+                  console.log('📊 Event: chatbot_opened');
+                  
+                  if (typeof gtag !== 'undefined') {
+                    gtag('event', 'chatbot_opened', {
+                      'event_category': 'Chatbot Engagement',
+                      'event_label': 'Widget Opened',
+                      'value': 1
+                    });
+                  }
+                }
+              });
+              
+              console.log('✅ Chatbot launcher trovato e tracking attivato');
+            }
+          }, 500);
+          
+          setTimeout(function() {
+            clearInterval(observeChatbot);
+          }, 10000);
+          
+          document.addEventListener('click', function(e) {
+            const isInChatbot = e.target.closest('[class*="vf"]') || 
+                              e.target.closest('[class*="voiceflow"]') ||
+                              e.target.closest('iframe[title*="voiceflow"]');
+            
+            if (isInChatbot && e.target.tagName === 'A') {
+              const linkUrl = e.target.href;
+              const linkText = e.target.textContent.trim();
+              
+              console.log('📊 Event: chatbot_link_click', linkText, linkUrl);
+              
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'chatbot_link_click', {
+                  'event_category': 'Chatbot Interaction',
+                  'event_label': linkText,
+                  'link_url': linkUrl,
+                  'value': 2
+                });
+                
+                if (linkUrl.includes('tesla.com') && linkUrl.includes('referral')) {
+                  console.log('🎯 CONVERSIONE: Referral Tesla cliccato!');
+                  
+                  gtag('event', 'referral_link_clicked', {
+                    'event_category': 'Conversion',
+                    'event_label': 'Tesla Referral from Chatbot',
+                    'value': 100
+                  });
+                }
+                
+                if (linkUrl.includes('wa.me') || linkUrl.includes('whatsapp')) {
+                  console.log('📱 WhatsApp link cliccato');
+                  
+                  gtag('event', 'whatsapp_clicked', {
+                    'event_category': 'Lead Generation',
+                    'event_label': 'WhatsApp from Chatbot',
+                    'value': 50
+                  });
+                }
+                
+                if (linkUrl.includes('mailto:')) {
+                  console.log('📧 Email link cliccato');
+                  
+                  gtag('event', 'email_clicked', {
+                    'event_category': 'Lead Generation',
+                    'event_label': 'Email from Chatbot',
+                    'value': 30
+                  });
+                }
+                
+                if (linkUrl.includes('ecobonus') || linkUrl.includes('invitalia')) {
+                  console.log('💰 Ecobonus link cliccato');
+                  
+                  gtag('event', 'ecobonus_link_clicked', {
+                    'event_category': 'Information',
+                    'event_label': 'Ecobonus Link from Chatbot',
+                    'value': 5
+                  });
+                }
+              }
+            }
+          }, true);
+          
+          document.addEventListener('click', function(e) {
+            const isInChatbot = e.target.closest('[class*="vf"]') || 
+                              e.target.closest('[class*="voiceflow"]');
+            
+            if (isInChatbot && e.target.tagName === 'BUTTON') {
+              const buttonText = e.target.textContent.trim();
+              
+              console.log('📊 Event: chatbot_button_click', buttonText);
+              
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'chatbot_button_click', {
+                  'event_category': 'Chatbot Interaction',
+                  'event_label': buttonText,
+                  'value': 1
+                });
+                
+                if (buttonText.toLowerCase().includes('ordina') || 
+                    buttonText.toLowerCase().includes('referral')) {
+                  gtag('event', 'order_button_clicked', {
+                    'event_category': 'Conversion Intent',
+                    'event_label': buttonText,
+                    'value': 20
+                  });
+                }
+              }
+            }
+          }, true);
+          
+          document.addEventListener('keypress', function(e) {
+            const isInChatbot = e.target.closest('[class*="vf"]') || 
+                              e.target.closest('[class*="voiceflow"]');
+            
+            if (isInChatbot && !firstInteraction) {
+              firstInteraction = true;
+              console.log('📊 Event: chatbot_first_interaction');
+              
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'chatbot_first_interaction', {
+                  'event_category': 'Chatbot Engagement',
+                  'event_label': 'User Started Typing',
+                  'value': 3
+                });
+              }
+            }
+          });
+          
+          console.log('✅ Tracking Voiceflow completamente attivato');
+          
+        }, 2000);
+        
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
+      v.type = "text/javascript"; 
+      s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
         
     <script>
         // Countdown Timer
