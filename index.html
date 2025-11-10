@@ -194,59 +194,6 @@
             padding: 40px 20px;
         }
 
-        /* Countdown Timer */
-        .countdown-banner {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
-            text-align: center;
-            padding: 15px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            animation: slideDown 0.5s ease-out;
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-
-        .countdown-banner p {
-            font-size: 1em;
-            margin-bottom: 8px;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            font-weight: bold;
-            font-size: 1.3em;
-        }
-
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .countdown-number {
-            background: #e82127;
-            padding: 8px 15px;
-            border-radius: 8px;
-            min-width: 50px;
-        }
-
-        .countdown-label {
-            font-size: 0.7em;
-            margin-top: 5px;
-            opacity: 0.8;
-        }
 
         .header {
             text-align: center;
@@ -737,17 +684,7 @@
             color: #1a1a1a;
         }
 
-        @media (max-width: 768px) {
-            .countdown {
-                gap: 10px;
-                font-size: 1.1em;
-            }
-
-            .countdown-number {
-                padding: 6px 10px;
-                min-width: 40px;
-            }
-
+        
             h1 {
                 font-size: 2em;
             }
@@ -969,30 +906,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
-    <!-- Countdown Banner -->
-    <div class="countdown-banner">
-        <p>⏰ Offerta Limitata - Termina tra:</p>
-        <div class="countdown" id="countdown">
-            <div class="countdown-item">
-                <div class="countdown-number" id="days">14</div>
-                <div class="countdown-label">Giorni</div>
-            </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="hours">23</div>
-                <div class="countdown-label">Ore</div>
-            </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="minutes">59</div>
-                <div class="countdown-label">Minuti</div>
-            </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="seconds">59</div>
-                <div class="countdown-label">Secondi</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
+       <div class="container">
         <div class="header">
             <div class="logo">
                 <svg viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Tesla Referral Program 2025">
@@ -1516,31 +1430,7 @@ function confirmContact(event, type) {
     </div>
        
     <script>
-        // Countdown Timer
-        const countdownDate = new Date("November 30, 2025 23:59:59").getTime();
-        
-        const updateCountdown = () => {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
-            
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            document.getElementById("days").textContent = days;
-            document.getElementById("hours").textContent = hours;
-            document.getElementById("minutes").textContent = minutes;
-            document.getElementById("seconds").textContent = seconds;
-            
-            if (distance < 0) {
-                document.querySelector('.countdown-banner').style.display = 'none';
-            }
-        };
-        
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
+     
         // Event tracking function
         window.gtag = window.gtag || function() {
             if (window.dataLayer) {
