@@ -174,7 +174,7 @@
     <link rel="preconnect" href="https://www.tesla.com">
     <link rel="dns-prefetch" href="https://www.tesla.com">
     
-    <title>Referral Tesla 2025: Ottieni 1000 km Ricarica Gratis o 500€ Sconto</title>
+    <title>Referral Tesla 2025 | ⚡Ottieni 1000 km Ricarica Gratis o 500€ Sconto</title>
     <meta name="description" content="Referral Tesla 2025: usa il codice referral Tesla nicola722048 per Model 3, Model Y, Model S, Model X. 1000km gratis o 500€ sconto. Link referral attivo novembre 2025.">
     <meta name="keywords" content="referral tesla 2025, codice referral tesla nicola722048, link referral tesla attivo, tesla model 3 sconto, tesla model y 1000km gratis, supercharger gratis tesla, codice sconto tesla novembre 2025, programma referral tesla italia">
     <meta property="og:title" content="Referral Tesla Novembre 2025 - 1000 km Gratis per Model 3 e Model Y o 500€ Sconto">
@@ -271,54 +271,194 @@
             color: #e82127;
         }
 
-        /* Table of Contents */
+        /* Table of Contents - Horizontal Menu */
         .toc {
-            background: #f8f8f8;
-            padding: 30px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 0;
             border-radius: 15px;
             margin: 40px 0;
-            border-left: 5px solid #e82127;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            overflow: hidden;
         }
 
-        .toc h3 {
-            color: #1a1a1a;
-            font-size: 1.5em;
-            margin-bottom: 20px;
+        .toc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background: linear-gradient(135deg, #e82127 0%, #c41e22 100%);
+        }
+
+        .toc-title {
+            color: white;
+            font-size: 1.3em;
+            font-weight: 700;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc-toggle {
+            display: none;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2em;
+        }
+
+        .toc-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .toc.active .hamburger span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .toc.active .hamburger span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .toc.active .hamburger span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .toc-nav {
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: #e82127 #2d2d2d;
+        }
+
+        .toc-nav::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .toc-nav::-webkit-scrollbar-track {
+            background: #2d2d2d;
+        }
+
+        .toc-nav::-webkit-scrollbar-thumb {
+            background: #e82127;
+            border-radius: 3px;
         }
 
         .toc ul {
             list-style: none;
             padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 0;
+            width: 100%;
         }
 
         .toc li {
-            padding: 10px 0;
-            border-bottom: 1px solid #e0e0e0;
+            flex: 1;
+            min-width: max-content;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .toc li:last-child {
-            border-bottom: none;
+            border-right: none;
         }
 
         .toc a {
-            color: #333;
+            color: white;
             text-decoration: none;
-            font-size: 1.05em;
+            font-size: 0.95em;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            gap: 8px;
+            padding: 20px 25px;
             transition: all 0.3s ease;
-        }
-
-        .toc a:hover {
-            color: #e82127;
-            padding-left: 10px;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
         }
 
         .toc a::before {
-            content: "→";
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #e82127;
+            transition: width 0.3s ease;
+        }
+
+        .toc a:hover {
+            background: rgba(255, 255, 255, 0.1);
             color: #e82127;
-            font-weight: bold;
+        }
+
+        .toc a:hover::before {
+            width: 100%;
+        }
+
+        .toc a .icon {
+            font-size: 1.2em;
+        }
+
+        /* Mobile TOC */
+        @media (max-width: 768px) {
+            .toc-toggle {
+                display: block;
+            }
+
+            .toc-nav {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .toc.active .toc-nav {
+                max-height: 500px;
+                overflow-y: auto;
+            }
+
+            .toc ul {
+                flex-direction: column;
+            }
+
+            .toc li {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .toc li:last-child {
+                border-bottom: none;
+            }
+
+            .toc a {
+                justify-content: flex-start;
+                padding: 18px 30px;
+            }
         }
 
         /* Last Updated Notice */
@@ -1134,18 +1274,32 @@
             </p>
         </div>
 
-        <!-- Table of Contents -->
+        <!-- Table of Contents - Horizontal Menu -->
         <nav class="toc" id="indice">
-            <h3>📑 In questa pagina:</h3>
-            <ul>
-                <li><a href="#vantaggi">Vantaggi Immediati con il Referral Tesla</a></li>
-                <li><a href="#modelli">Tutti i Modelli Tesla Disponibili</a></li>
-                <li><a href="#come-funziona">Come Funziona il Programma Referral</a></li>
-                <li><a href="#steps">Come Usare il Referral in 4 Passi</a></li>
-                <li><a href="#perche">Perché Usare il Mio Link Referral</a></li>
-                <li><a href="#faq">Domande Frequenti (FAQ)</a></li>
-                <li><a href="#contatti">Supporto e Contatti</a></li>
-            </ul>
+            <div class="toc-header">
+                <h3 class="toc-title">
+                    <span>📑</span>
+                    <span>Navigazione Rapida</span>
+                </h3>
+                <button class="toc-toggle" onclick="toggleTOC()" aria-label="Toggle menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+            <nav class="toc-nav">
+                <ul>
+                    <li><a href="#vantaggi"><span class="icon">🎁</span> Vantaggi</a></li>
+                    <li><a href="#modelli"><span class="icon">🚗</span> Modelli</a></li>
+                    <li><a href="#come-funziona"><span class="icon">⚙️</span> Come Funziona</a></li>
+                    <li><a href="#steps"><span class="icon">📋</span> 4 Passi</a></li>
+                    <li><a href="#perche"><span class="icon">💡</span> Perché Sceglierci</a></li>
+                    <li><a href="#faq"><span class="icon">❓</span> FAQ</a></li>
+                    <li><a href="#contatti"><span class="icon">📞</span> Contatti</a></li>
+                </ul>
+            </nav>
         </nav>
 
         <div class="highlight-section" id="vantaggi">
@@ -1618,6 +1772,11 @@
                 }
             });
         });
+
+        // TOC Toggle for mobile
+        function toggleTOC() {
+            document.getElementById('indice').classList.toggle('active');
+        }
 
         // Contact confirmation function
         function confirmContact(event, type) {
