@@ -146,6 +146,42 @@
 }
 </script>
 
+    <!-- HowTo Schema per gli Step -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Come Usare il Referral Tesla",
+  "description": "Guida passo passo per utilizzare il codice referral Tesla e ottenere 1000 km gratis",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Clicca sul link referral Tesla",
+      "text": "Verrai reindirizzato al sito ufficiale Tesla con il codice referral già applicato automaticamente"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Scegli il tuo modello Tesla",
+      "text": "Tesla Model 3, Model Y, Model S o Model X - seleziona quello perfetto per te"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Configura il veicolo",
+      "text": "Personalizza colore, interni, ruote e opzioni secondo le tue preferenze"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Completa l'ordine",
+      "text": "Ottieni 1000 km di ricariche Supercharger gratuite o 500€ di sconto immediato"
+    }
+  ]
+}
+</script>
+
     <!-- WebSite Schema.org -->
     <script type="application/ld+json">
     {
@@ -241,6 +277,56 @@
             padding: 40px 20px;
         }
 
+.breadcrumb {
+    padding: 15px 0;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 0 20px;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: "›";
+    margin-left: 8px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #e82127;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #c41e22;
+    text-decoration: underline;
+}
+
+.breadcrumb li:last-child {
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .breadcrumb {
+        font-size: 0.85em;
+    }
+}
+        
         .header {
             text-align: center;
             margin-bottom: 60px;
@@ -957,6 +1043,22 @@
     </style>
 </head>
 <body>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="/" itemprop="item">
+                <span itemprop="name">Home</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">Referral Tesla 2025</span>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+</nav>
+    
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K9RGBV"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -970,7 +1072,7 @@
                 </svg>
             </div>
             <div class="badge">🏆 Proprietario Tesla Verificato dal 2021</div>
-            <h1>Tesla Supercharger Referral 2025: 1000 km Gratis con Codice nicola722048</h1>
+            <h1>Tesla Supercharger Referral 2025: 1000 km con Codice nicola722048</h1>
             <p class="subtitle">Link Referral Tesla Novembre 2025: 1000 km Gratis per Model 3 e Model Y, 500 € Sconto Tesla per Model S e Model X</p>
             <div class="social-proof">
                 <div class="social-proof-item">
