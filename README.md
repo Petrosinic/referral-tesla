@@ -1,6 +1,6 @@
 # Referral Tesla Italia 2025
 
-Sito ufficiale per il programma referral Tesla in Italia.
+Sito con link attivo per il programma referral Tesla in Italia.
 
 🚗 **Codice Referral**: nicola722048
 
