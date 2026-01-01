@@ -1,4 +1,4 @@
-# Referral Tesla Italia 2025
+# Referral Tesla Italia 2026
 
 Sito con link attivo per il programma referral Tesla in Italia.
 
@@ -8,4 +8,4 @@ Sito con link attivo per il programma referral Tesla in Italia.
 - 1000 km Supercharger gratis (Model 3/Y)
 - 500€ sconto (Model S/X)
 
-🌐 **Visita il sito**: https://petrosinic.github.io/referral-tesla-2025/
+🌐 **Visita il sito**: https://petrosinic.github.io/referral-tesla/
