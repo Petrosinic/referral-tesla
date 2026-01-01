@@ -1,14 +1,14 @@
 {
-"name":"Referral Tesla 2025",
+"name":"Referral Tesla 2026",
 "short_name":"Tesla Referral",
 "icons":[
 {
-"src":"/referral-tesla-2025/android-chrome-192x192.png",
+"src":"/referral-tesla/android-chrome-192x192.png",
 "sizes":"192x192",
 "type":"image/png"
 },
 {
-"src":"/referral-tesla-2025/android-chrome-512x512.png",
+"src":"/referral-tesla/android-chrome-512x512.png",
 "sizes":"512x512",
 "type":"image/png"
 }
