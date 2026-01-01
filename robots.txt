@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://petrosinic.github.io/referral-tesla-2025/sitemap.xml
+Sitemap: https://petrosinic.github.io/referral-tesla/sitemap.xml
 User-agent: GPTBot
 Allow: /
 User-agent: ChatGPT-User
