@@ -1,6 +1,6 @@
-# Referral Tesla Italia 2026
+# Referral Tesla
 
-Sito con link attivo per il programma referral Tesla in Italia.
+Referral Tesla 2026 - Ottieni 1000 km Supercharger gratis o 500€ di sconto con il link codice sconto referral Tesla
 
 🚗 **Codice Referral**: nicola722048
 
