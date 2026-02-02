@@ -800,13 +800,18 @@
             flex: 1;
         }
 
-        .step-content strong {
-            display: block;
-            font-size: 1.3em;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-        }
+        .step-content > strong {
+    display: block;
+    font-size: 1.3em;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
 
+.step-content p strong {
+    font-size: inherit;
+    font-weight: 700;
+}
+        
         .step-content p {
             color: #666;
             font-size: 1.05em;
