@@ -1747,6 +1747,24 @@
             });
         });
     </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var faqQuestions = document.querySelectorAll('.faq-question');
+
+  faqQuestions.forEach(function (q, index) {
+    q.addEventListener('click', function () {
+      var questionText = q.innerText.trim();
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'faq_click',
+        faq_question: questionText,
+        faq_index: index + 1
+      });
+    });
+  });
+});
+</script>
 
 </body>
 </html>
