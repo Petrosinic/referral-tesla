@@ -12,6 +12,8 @@
     <link rel="canonical" href="https://petrosinic.github.io/referral-tesla/">
     <link rel="alternate" hreflang="it-IT" href="https://petrosinic.github.io/referral-tesla/">
     <link rel="alternate" hreflang="x-default" href="https://petrosinic.github.io/referral-tesla/">
+    <meta name="geo.region" content="IT" />
+    <meta name="geo.placename" content="Italia" />
 
     <!-- Open Graph Ottimizzato -->
 <meta property="og:site_name" content="Referral Tesla Italia">
@@ -1118,6 +1120,23 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
+<div id="geo-notice" style="display:none; background:#fff3cd; border-bottom:2px solid #ffc107; 
+     padding:12px 20px; text-align:center; font-size:0.95em; color:#856404;">
+    ⚠️ This referral is valid <strong>only for purchases in Italy</strong>. 
+    Il programma referral Tesla è valido solo per ordini effettuati in Italia.
+</div>
+
+<script>
+// Mostra l'avviso solo a utenti non italiani
+fetch('https://ipapi.co/json/')
+  .then(r => r.json())
+  .then(data => {
+    if (data.country_code !== 'IT') {
+      document.getElementById('geo-notice').style.display = 'block';
+    }
+  })
+  .catch(() => {}); // fallback silenzioso se l'API non risponde
+</script>    
 <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
