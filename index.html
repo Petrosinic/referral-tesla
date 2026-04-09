@@ -514,6 +514,7 @@
             gap: 16px;
         }
         .benefit-card {
+            background: linear-gradient(145deg, var(--bg) 60%, var(--red-soft) 100%) !important;
             background: var(--bg-soft);
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
@@ -526,6 +527,7 @@
             position: relative;
         }
         .benefit-card:hover {
+            background: linear-gradient(145deg, var(--bg) 40%, var(--red-mid) 100%) !important;
             border-color: var(--red);
             box-shadow: var(--shadow-hover);
             transform: translateY(-4px);
@@ -1023,6 +1025,33 @@
 .hero-image-wrap:hover .hero-image {
   transform: scale(1.02);
 }
+ .section-dark {
+  background: var(--text); /* #1a1916 */
+  margin: 0 calc(-50vw + 50%); /* full-bleed */
+  padding: 72px calc(50vw - 50%);
+}
+.section-dark .section-label { color: #cc4444; }
+.section-dark .section-title { color: #f5f4f0; }
+.section-dark .model-card {
+  background: #242220;
+  border-color: #3a3835;
+  color: #cdccca;
+}
+.section-dark .model-card h3 { color: #f5f4f0; }
+.section-dark .model-tag { 
+  background: #2d2c2a; 
+  border-color: #3a3835; 
+  color: #8a8784; 
+}
+.section-dark .model-cta {
+  border-color: #4a4845;
+  color: #8a8784;
+}
+.section-dark .model-cta:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: white;
+}       
     </style>
 </head>
 <body>
@@ -1201,7 +1230,19 @@
     <div class="section-divider"></div>
 
     <!-- ══ MODELLI ══ -->
+    <!-- MODELLI -->
+<div class="section-dark">
+<div class="reveal" id="modelli">
+  ...tutto il contenuto esistente...
+</div>
+</div>
     <div class="reveal" id="modelli">
+        <!-- MODELLI -->
+<div class="section-dark">
+<div class="reveal" id="modelli">
+  ...tutto il contenuto esistente...
+</div>
+</div>
         <div class="section-label">Modelli disponibili</div>
         <div class="section-title">Scegli la tua Tesla con codice referral attivo</div>
         <div class="models-grid">
