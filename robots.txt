@@ -1,0 +1,59 @@
+# Robots.txt – Codice Referral Tesla Italia 2026
+# Sito: https://petrosinic.github.io/referral-tesla/
+# Lingua: Italiano | Mercato: Italia (esclusivo)
+
+User-agent: *
+Allow: /
+
+# AI / LLM crawlers (GEO – Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Sitemap & feed
+Sitemap: https://petrosinic.github.io/referral-tesla/sitemap.xml
+Host: petrosinic.github.io
