@@ -1,5 +1,5 @@
 # Robots.txt – Codice Referral Tesla Italia 2026
-# Sito: https://petrosinic.github.io/referral-tesla/
+# Sito: https://referral-tesla.it/
 # Lingua: Italiano | Mercato: Italia (esclusivo)
 
 User-agent: *
