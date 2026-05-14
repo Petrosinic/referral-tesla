@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+  <url>
+    <loc>https://referral-tesla.it/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://referral-tesla.it/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://referral-tesla.it/" />
+    <image:image>
+      <image:loc>https://referral-tesla.it/images/tesla-model3-1600.jpg</image:loc>
+      <image:title>Tesla Model 3 Highland in ricarica — Italia 2026</image:title>
+      <image:caption>Tesla Model 3 Highland bianca in ricarica, la Tesla del referrer Nicola</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1617704548623-340376564e1b?w=1600&amp;h=560&amp;fit=crop&amp;q=80</image:loc>
+      <image:title>Tesla Model 3 berlina elettrica</image:title>
+      <image:caption>Tesla Model 3 berlina elettrica disponibile con codice referral Tesla 2026</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://referral-tesla.it/images/nicola.jpg</image:loc>
+      <image:title>Nicola Petrosino, proprietario Tesla Model 3</image:title>
+      <image:caption>Nicola Petrosino, proprietario Tesla Model 3 dal 2021 e referrer verificato</image:caption>
+    </image:image>
+  </url>
+</urlset>
