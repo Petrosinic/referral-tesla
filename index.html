@@ -89,50 +89,81 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+
     {
       "@type": "WebSite",
       "@id": "https://referral-tesla.it/#website",
       "url": "https://referral-tesla.it/",
       "name": "Referral Tesla Italia",
       "alternateName": ["Codice Referral Tesla 2026", "Tesla Referral nicola722048"],
-      "description": "Codice referral Tesla 2026 verificato (nicola722048): 1.000 km Supercharger gratis o 500€ sconto",
-      "inLanguage": "it-IT",
-      "publisher": { "@id": "https://referral-tesla.it/#person" }
+      "inLanguage": "it-IT"
     },
+
+    {
+      "@type": "Organization",
+      "@id": "https://referral-tesla.it/#organization",
+      "name": "Referral Tesla Italia",
+      "url": "https://referral-tesla.it/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://referral-tesla.it/apple-touch-icon.png",
+        "width": 180,
+        "height": 180
+      },
+      "founder": { "@id": "https://referral-tesla.it/#person" }
+    },
+
     {
       "@type": "Person",
       "@id": "https://referral-tesla.it/#person",
       "name": "Nicola Petrosino",
+      "givenName": "Nicola",
+      "familyName": "Petrosino",
       "url": "https://referral-tesla.it/",
       "image": {
         "@type": "ImageObject",
         "url": "https://referral-tesla.it/images/nicola.jpg",
+        "width": 400,
+        "height": 400,
         "caption": "Nicola Petrosino, proprietario Tesla Model 3 dal 2021"
       },
       "description": "Proprietario Tesla Model 3 dal 2021. Ha aiutato oltre 31 acquirenti italiani a ordinare la propria Tesla con il codice referral nicola722048.",
       "jobTitle": "Tesla Owner & Referral Advisor",
       "knowsAbout": ["Tesla Model 3", "Tesla Model Y", "Tesla Model S", "Tesla Model X", "Programma Referral Tesla", "Supercharger", "Auto Elettriche"],
       "sameAs": ["https://www.facebook.com/nicola.petrosino.79"],
-      "knowsLanguage": ["it", "en"],
+      "knowsLanguage": [
+        { "@type": "Language", "name": "Italian", "alternateName": "it" },
+        { "@type": "Language", "name": "English", "alternateName": "en" }
+      ],
       "address": { "@type": "PostalAddress", "addressCountry": "IT" }
     },
+
     {
       "@type": "WebPage",
       "@id": "https://referral-tesla.it/#webpage",
       "url": "https://referral-tesla.it/",
       "name": "Codice Referral Tesla 2026 | 1000 km Supercharger Gratis",
+      "description": "Codice referral Tesla 2026 verificato per il mercato italiano. Ottieni 1.000 km Supercharger gratis su Model 3 e Model Y o 500€ di sconto su Model S e Model X.",
       "isPartOf": { "@id": "https://referral-tesla.it/#website" },
       "about": { "@id": "https://referral-tesla.it/#service" },
+      "author": { "@id": "https://referral-tesla.it/#person" },
+      "publisher": { "@id": "https://referral-tesla.it/#organization" },
       "datePublished": "2025-11-12T00:00:00+01:00",
       "dateModified": "2026-05-14T00:00:00+02:00",
       "inLanguage": "it-IT",
-      "primaryImageOfPage": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1200&h=630&fit=crop",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1200&h=630&fit=crop",
+        "width": 1200,
+        "height": 630
+      },
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [".speakable-summary", ".speakable-faq", "h1", ".subtitle"]
       },
       "breadcrumb": { "@id": "https://referral-tesla.it/#breadcrumb" }
     },
+
     {
       "@type": "BreadcrumbList",
       "@id": "https://referral-tesla.it/#breadcrumb",
@@ -141,6 +172,7 @@
         { "@type": "ListItem", "position": 2, "name": "Codice Referral Tesla 2026" }
       ]
     },
+
     {
       "@type": "Service",
       "@id": "https://referral-tesla.it/#service",
@@ -175,47 +207,52 @@
           {"@type":"AdministrativeArea","name":"Valle d'Aosta"}
         ]
       },
-      "availableLanguage": {"@type":"Language","name":"Italian","alternateName":"it"},
+      "availableLanguage": { "@type": "Language", "name": "Italian", "alternateName": "it" },
       "description": "Servizio di referral Tesla 2026 esclusivo per ordini Tesla in Italia: usa il codice nicola722048 per ottenere 1.000 km Supercharger gratis su Model 3 e Model Y o 500€ di sconto su Model S e Model X. Supporto gratuito in italiano incluso.",
       "audience": {
         "@type": "PeopleAudience",
         "audienceType": "Acquirenti Tesla in Italia",
-        "geographicArea": {"@type":"Country","name":"Italia","identifier":"IT"}
+        "geographicArea": { "@type": "Country", "name": "Italia", "identifier": "IT" }
       },
-      "spatialCoverage": {"@type":"Country","name":"Italia","identifier":"IT"},
-      "eligibleRegion": {"@type":"Country","name":"Italia","identifier":"IT"},
+      "eligibleRegion": { "@type": "Country", "name": "Italia", "identifier": "IT" },
       "ineligibleRegion": [
-        {"@type":"Place","name":"Resto del mondo (programma referral diverso per ogni Paese)"}
+        { "@type": "Country", "name": "United States" },
+        { "@type": "Country", "name": "France" },
+        { "@type": "Country", "name": "Germany" },
+        { "@type": "Country", "name": "Spain" },
+        { "@type": "Country", "name": "United Kingdom" }
       ],
       "offers": {
-        "@type": "AggregateOffer",
+        "@type": "Offer",
+        "price": "0",
         "priceCurrency": "EUR",
-        "lowPrice": "0",
-        "highPrice": "0",
-        "offerCount": "4",
         "availability": "https://schema.org/InStock",
         "validFrom": "2026-01-01",
         "validThrough": "2026-12-31"
       }
     },
+
     {
       "@type": "Product",
       "@id": "https://referral-tesla.it/#product",
       "name": "Codice Referral Tesla 2026 — nicola722048",
       "description": "Codice referral Tesla ufficiale e verificato per ordini in Italia: 1.000 km Supercharger gratuiti su Model 3 e Model Y, oppure 500€ di sconto su Model S e Model X.",
-      "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1200&h=630&fit=crop",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1200&h=630&fit=crop",
+        "width": 1200,
+        "height": 630
+      },
       "brand": {
         "@type": "Brand",
         "name": "Tesla",
         "sameAs": [
           "https://www.tesla.com/it_it",
           "https://it.wikipedia.org/wiki/Tesla_(azienda)",
-          "https://www.wikidata.org/wiki/Q478214",
-          "https://twitter.com/Tesla"
+          "https://www.wikidata.org/wiki/Q478214"
         ]
       },
       "sku": "nicola722048",
-      "mpn": "TESLA-REF-2026-IT",
       "category": "Tesla Referral Code",
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -225,9 +262,27 @@
         "worstRating": "1"
       },
       "review": [
-        { "@type": "Review", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5"}, "author": {"@type":"Person","name":"Marco R."}, "datePublished": "2026-02-18", "reviewBody": "Nicola è stato super disponibile e mi ha guidato passo passo nella configurazione. I 1000 km gratuiti sono stati applicati immediatamente. Consigliatissimo!" },
-        { "@type": "Review", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5"}, "author": {"@type":"Person","name":"Giulia S."}, "datePublished": "2026-03-05", "reviewBody": "Grazie al referral ho risparmiato e ho ricevuto consigli preziosi sulla scelta degli accessori. Servizio impeccabile!" },
-        { "@type": "Review", "reviewRating": {"@type":"Rating","ratingValue":"5","bestRating":"5"}, "author": {"@type":"Person","name":"Andrea P."}, "datePublished": "2026-04-02", "reviewBody": "Processo semplicissimo. Ho cliccato sul link, configurato la mia Model 3 e i km gratuiti erano già nel mio account. Perfetto!" }
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Marco R." },
+          "datePublished": "2026-02-18",
+          "reviewBody": "Nicola è stato super disponibile e mi ha guidato passo passo nella configurazione. I 1000 km gratuiti sono stati applicati immediatamente. Consigliatissimo!"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Giulia S." },
+          "datePublished": "2026-03-05",
+          "reviewBody": "Grazie al referral ho risparmiato e ho ricevuto consigli preziosi sulla scelta degli accessori. Servizio impeccabile!"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Andrea P." },
+          "datePublished": "2026-04-02",
+          "reviewBody": "Processo semplicissimo. Ho cliccato sul link, configurato la mia Model 3 e i km gratuiti erano già nel mio account. Perfetto!"
+        }
       ],
       "offers": {
         "@type": "Offer",
@@ -237,35 +292,72 @@
         "url": "https://www.tesla.com/it_it/referral/nicola722048",
         "priceValidUntil": "2026-12-31",
         "seller": { "@id": "https://referral-tesla.it/#person" },
-        "areaServed": {"@type":"Country","name":"Italia","identifier":"IT"},
-        "eligibleRegion": {"@type":"Country","name":"Italia","identifier":"IT"},
-        "ineligibleRegion": [
-          {"@type":"Place","name":"Stati Uniti"},
-          {"@type":"Place","name":"Francia"},
-          {"@type":"Place","name":"Germania"},
-          {"@type":"Place","name":"Spagna"},
-          {"@type":"Place","name":"Regno Unito"},
-          {"@type":"Place","name":"Resto del mondo"}
-        ]
+        "eligibleRegion": { "@type": "Country", "name": "Italia", "identifier": "IT" }
       }
     },
+
     {
       "@type": "FAQPage",
       "@id": "https://referral-tesla.it/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Qual è il codice referral Tesla valido nel 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Il codice referral Tesla attivo e verificato nel 2026 in Italia è nicola722048. Garantisce 1.000 km di ricariche Supercharger gratuite su Model 3 e Model Y oppure 500€ di sconto su Model S e Model X." } },
-        { "@type": "Question", "name": "Come funziona il Tesla Supercharger Referral?", "acceptedAnswer": { "@type": "Answer", "text": "Cliccando sul link referral Tesla nicola722048 sei reindirizzato al sito Tesla con il codice già applicato. Ordina il veicolo nuovo: alla consegna riceverai automaticamente sul tuo account Tesla 1.000 km Supercharger gratuiti (Model 3/Y) o 500€ in Tesla Credits (Model S/X)." } },
-        { "@type": "Question", "name": "Dove inserisco il codice referral Tesla nicola722048?", "acceptedAnswer": { "@type": "Answer", "text": "Hai due opzioni: 1) clicca uno dei pulsanti rossi di questa pagina e il codice viene applicato in automatico; 2) inseriscilo manualmente nel campo Codice Referral durante la fase di configurazione e ordine sul sito ufficiale Tesla. Il codice non può essere aggiunto dopo che l'ordine è stato finalizzato." } },
-        { "@type": "Question", "name": "Il referral Tesla è gratuito?", "acceptedAnswer": { "@type": "Answer", "text": "Sì, è completamente gratuito per te. Il programma referral è gestito direttamente da Tesla. Non c'è alcun sovrapprezzo: paghi esattamente lo stesso prezzo dei modelli a listino e ricevi in più i benefici del programma." } },
-        { "@type": "Question", "name": "Il referral Tesla Model 3 funziona per tutte le versioni?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. Il referral funziona su tutte le versioni Model 3: Standard RWD (da 36.990€), Long Range RWD (da 42.690€), Long Range AWD (da 48.790€) e Performance (da 57.490€). Ottieni sempre 1.000 km Supercharger gratuiti." } },
-        { "@type": "Question", "name": "Quanti km di Supercharger riceverò esattamente?", "acceptedAnswer": { "@type": "Answer", "text": "1.000 km di ricariche gratuite sui Supercharger Tesla. Considerando i prezzi Supercharger 2026 (~0,38-0,45€/kWh) e un consumo medio Model 3/Y di 15 kWh/100km, il valore stimato è di circa 60-70€. I crediti scadono 12 mesi dopo l'attivazione." } },
-        { "@type": "Question", "name": "Tesla è ancora cumulabile con incentivi statali?", "acceptedAnswer": { "@type": "Answer", "text": "In linea di principio sì, ma ad aprile 2026 il fondo MASE PNRR per veicoli elettrici risulta in larga parte esaurito. Il referral Tesla resta sempre attivo e indipendente dagli incentivi statali. Verifica la disponibilità reale degli incentivi sul portale ufficiale MASE prima dell'ordine." } },
-        { "@type": "Question", "name": "Quando ricevo i 1000 km Supercharger gratuiti?", "acceptedAnswer": { "@type": "Answer", "text": "I crediti vengono accreditati automaticamente sul tuo account Tesla entro pochi giorni dalla consegna del veicolo. Sono visibili nell'app Tesla alla sezione Account > Loyalty." } },
-        { "@type": "Question", "name": "Il referral Tesla è valido per veicoli usati o Tesla Approved?", "acceptedAnswer": { "@type": "Answer", "text": "No. Il programma referral Tesla è valido esclusivamente per l'acquisto di veicoli nuovi direttamente da Tesla. Non si applica a veicoli usati, Tesla Approved o veicoli di terze parti." } },
-        { "@type": "Question", "name": "Cosa succede se non uso il codice referral?", "acceptedAnswer": { "@type": "Answer", "text": "Senza referral perdi i 1.000 km Supercharger gratuiti (Model 3/Y) o i 500€ di sconto (Model S/X). Tesla non riconosce il codice se viene aggiunto dopo la finalizzazione dell'ordine." } },
-        { "@type": "Question", "name": "Meglio Model 3 o Model Y con il Tesla Referral?", "acceptedAnswer": { "@type": "Answer", "text": "Entrambi ottengono 1.000 km Supercharger gratis. Model 3 è una berlina più sportiva e leggermente meno costosa (da 36.990€); Model Y è un SUV più pratico, con più spazio e bagagliaio fino a 854 L. Per famiglia o viaggi lunghi: Model Y. Per dinamica e prezzo più contenuto: Model 3." } }
+        {
+          "@type": "Question",
+          "name": "Qual è il codice referral Tesla valido nel 2026?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Il codice referral Tesla attivo e verificato nel 2026 in Italia è nicola722048. Garantisce 1.000 km di ricariche Supercharger gratuite su Model 3 e Model Y oppure 500€ di sconto su Model S e Model X." }
+        },
+        {
+          "@type": "Question",
+          "name": "Come funziona il Tesla Supercharger Referral?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Cliccando sul link referral Tesla nicola722048 sei reindirizzato al sito Tesla con il codice già applicato. Ordina il veicolo nuovo: alla consegna riceverai automaticamente sul tuo account Tesla 1.000 km Supercharger gratuiti (Model 3/Y) o 500€ in Tesla Credits (Model S/X)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Dove inserisco il codice referral Tesla nicola722048?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Hai due opzioni: 1) clicca uno dei pulsanti rossi di questa pagina e il codice viene applicato in automatico; 2) inseriscilo manualmente nel campo Codice Referral durante la fase di configurazione e ordine sul sito ufficiale Tesla. Il codice non può essere aggiunto dopo che l'ordine è stato finalizzato." }
+        },
+        {
+          "@type": "Question",
+          "name": "Il referral Tesla è gratuito?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sì, è completamente gratuito per te. Il programma referral è gestito direttamente da Tesla. Non c'è alcun sovrapprezzo: paghi esattamente lo stesso prezzo dei modelli a listino e ricevi in più i benefici del programma." }
+        },
+        {
+          "@type": "Question",
+          "name": "Il referral Tesla Model 3 funziona per tutte le versioni?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sì. Il referral funziona su tutte le versioni Model 3: Standard RWD (da 36.990€), Long Range RWD (da 42.690€), Long Range AWD (da 48.790€) e Performance (da 57.490€). Ottieni sempre 1.000 km Supercharger gratuiti." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanti km di Supercharger riceverò esattamente?",
+          "acceptedAnswer": { "@type": "Answer", "text": "1.000 km di ricariche gratuite sui Supercharger Tesla. Considerando i prezzi Supercharger 2026 (~0,38-0,45€/kWh) e un consumo medio Model 3/Y di 15 kWh/100km, il valore stimato è di circa 60-70€. I crediti scadono 12 mesi dopo l'attivazione." }
+        },
+        {
+          "@type": "Question",
+          "name": "Tesla è ancora cumulabile con incentivi statali?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In linea di principio sì, ma ad aprile 2026 il fondo MASE PNRR per veicoli elettrici risulta in larga parte esaurito. Il referral Tesla resta sempre attivo e indipendente dagli incentivi statali. Verifica la disponibilità reale degli incentivi sul portale ufficiale MASE prima dell'ordine." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quando ricevo i 1000 km Supercharger gratuiti?",
+          "acceptedAnswer": { "@type": "Answer", "text": "I crediti vengono accreditati automaticamente sul tuo account Tesla entro pochi giorni dalla consegna del veicolo. Sono visibili nell'app Tesla alla sezione Account > Loyalty." }
+        },
+        {
+          "@type": "Question",
+          "name": "Il referral Tesla è valido per veicoli usati o Tesla Approved?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Il programma referral Tesla è valido esclusivamente per l'acquisto di veicoli nuovi direttamente da Tesla. Non si applica a veicoli usati, Tesla Approved o veicoli di terze parti." }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede se non uso il codice referral?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Senza referral perdi i 1.000 km Supercharger gratuiti (Model 3/Y) o i 500€ di sconto (Model S/X). Tesla non riconosce il codice se viene aggiunto dopo la finalizzazione dell'ordine." }
+        },
+        {
+          "@type": "Question",
+          "name": "Meglio Model 3 o Model Y con il Tesla Referral?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Entrambi ottengono 1.000 km Supercharger gratis. Model 3 è una berlina più sportiva e leggermente meno costosa (da 36.990€); Model Y è un SUV più pratico, con più spazio e bagagliaio fino a 854 L. Per famiglia o viaggi lunghi: Model Y. Per dinamica e prezzo più contenuto: Model 3." }
+        }
       ]
     },
+
     {
       "@type": "HowTo",
       "@id": "https://referral-tesla.it/#howto",
@@ -273,15 +365,42 @@
       "description": "Guida ufficiale 2026 in 4 passi per attivare il referral Tesla e ottenere 1.000 km Supercharger gratis o 500€ di sconto.",
       "totalTime": "PT5M",
       "estimatedCost": { "@type": "MonetaryAmount", "currency": "EUR", "value": "0" },
-      "supply": [{"@type":"HowToSupply","name":"Connessione internet"}, {"@type":"HowToSupply","name":"Documento d'identità per il pagamento dell'acconto Tesla"}],
-      "tool": [{"@type":"HowToTool","name":"Sito ufficiale Tesla.com"}],
+      "supply": [
+        { "@type": "HowToSupply", "name": "Connessione internet" },
+        { "@type": "HowToSupply", "name": "Documento d'identità per il pagamento dell'acconto Tesla" }
+      ],
+      "tool": [
+        { "@type": "HowToTool", "name": "Sito ufficiale Tesla.com" }
+      ],
       "step": [
-        { "@type": "HowToStep", "position": 1, "name": "Clicca sul link referral Tesla", "text": "Premi uno dei pulsanti rossi su questa pagina: verrai reindirizzato al sito ufficiale Tesla con il codice nicola722048 già applicato.", "url": "https://referral-tesla.it/#cta-ordina" },
-        { "@type": "HowToStep", "position": 2, "name": "Scegli il modello Tesla", "text": "Seleziona Model 3, Model Y, Model S o Model X. Il referral è valido su tutti i modelli." },
-        { "@type": "HowToStep", "position": 3, "name": "Configura il veicolo", "text": "Personalizza colore, interni, ruote e opzioni. Verifica nella schermata di riepilogo che il codice referral nicola722048 sia presente." },
-        { "@type": "HowToStep", "position": 4, "name": "Completa l'ordine e ricevi i benefici", "text": "Finalizza l'acquisto: alla consegna riceverai automaticamente 1.000 km Supercharger gratuiti (Model 3/Y) o 500€ Tesla Credits (Model S/X)." }
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Clicca sul link referral Tesla",
+          "text": "Premi uno dei pulsanti rossi su questa pagina: verrai reindirizzato al sito ufficiale Tesla con il codice nicola722048 già applicato.",
+          "url": "https://referral-tesla.it/#cta-ordina"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Scegli il modello Tesla",
+          "text": "Seleziona Model 3, Model Y, Model S o Model X. Il referral è valido su tutti i modelli."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Configura il veicolo",
+          "text": "Personalizza colore, interni, ruote e opzioni. Verifica nella schermata di riepilogo che il codice referral nicola722048 sia presente."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Completa l'ordine e ricevi i benefici",
+          "text": "Finalizza l'acquisto: alla consegna riceverai automaticamente 1.000 km Supercharger gratuiti (Model 3/Y) o 500€ Tesla Credits (Model S/X)."
+        }
       ]
     },
+
     {
       "@type": "ItemList",
       "@id": "https://referral-tesla.it/#models",
@@ -295,6 +414,7 @@
         { "@type": "ListItem", "position": 4, "name": "Tesla Model X", "url": "https://www.tesla.com/it_it/modelx/design?referral=nicola722048" }
       ]
     },
+
     {
       "@type": "Article",
       "@id": "https://referral-tesla.it/#article",
@@ -302,14 +422,20 @@
       "datePublished": "2025-11-12T00:00:00+01:00",
       "dateModified": "2026-05-14T00:00:00+02:00",
       "author": { "@id": "https://referral-tesla.it/#person" },
-      "publisher": { "@id": "https://referral-tesla.it/#person" },
-      "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1200&h=630&fit=crop",
+      "publisher": { "@id": "https://referral-tesla.it/#organization" },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1200&h=630&fit=crop",
+        "width": 1200,
+        "height": 630
+      },
       "mainEntityOfPage": { "@id": "https://referral-tesla.it/#webpage" },
-      "wordCount": 2400,
+      "wordCount": 2488,
       "inLanguage": "it-IT",
       "articleSection": "Auto Elettriche",
       "keywords": "codice referral tesla, referral tesla 2026, tesla supercharger referral, nicola722048"
     }
+
   ]
 }
 </script>
