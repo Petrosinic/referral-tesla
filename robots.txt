@@ -55,5 +55,5 @@ User-agent: meta-externalagent
 Allow: /
 
 # Sitemap & feed
-Sitemap: https://petrosinic.github.io/referral-tesla/sitemap.xml
-Host: petrosinic.github.io
+Sitemap: https://referral-tesla.it/sitemap.xml
+Host: referral-tesla.it
