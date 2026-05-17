@@ -292,7 +292,39 @@
         "url": "https://www.tesla.com/it_it/referral/nicola722048",
         "priceValidUntil": "2026-12-31",
         "seller": { "@id": "https://referral-tesla.it/#person" },
-        "eligibleRegion": { "@type": "Country", "name": "Italia", "identifier": "IT" }
+        "eligibleRegion": { "@type": "Country", "name": "Italia", "identifier": "IT" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "IT"
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "IT",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+        }
       }
     },
 
@@ -420,7 +452,7 @@
       "@id": "https://referral-tesla.it/#article",
       "headline": "Codice Referral Tesla 2026: come ottenere 1000 km Supercharger gratis con nicola722048",
       "datePublished": "2025-11-12T00:00:00+01:00",
-      "dateModified": "2026-05-15T00:00:00+02:00",
+      "dateModified": "2026-05-14T00:00:00+02:00",
       "author": { "@id": "https://referral-tesla.it/#person" },
       "publisher": { "@id": "https://referral-tesla.it/#organization" },
       "image": {
@@ -439,6 +471,7 @@
   ]
 }
 </script>
+
 
 <!-- ========== GOOGLE TAG MANAGER (deferred per LCP) ========== -->
 <script>
