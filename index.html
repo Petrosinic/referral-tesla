@@ -822,9 +822,20 @@ h1{font-size:2.6em;color:#1a1a1a;margin-bottom:15px;font-weight:700;letter-spaci
 
 <!-- Section image: Tesla al Supercharger con codice referral -->
 <figure class="section-image">
-  <img src="/images/tesla-referral-supercharger.jpg"
+<picture>
+  <source type="image/webp"
+    srcset="https://images.unsplash.com/photo-1700411881984-971bc29083bd?w=800&h=280&fit=crop&q=75&fm=webp 800w,
+            https://images.unsplash.com/photo-1700411881984-971bc29083bd?w=1200&h=420&fit=crop&q=75&fm=webp 1200w,
+            https://images.unsplash.com/photo-1700411881984-971bc29083bd?w=1600&h=560&fit=crop&q=75&fm=webp 1600w"
+    sizes="(max-width: 768px) 100vw, 1160px">
+  <img src="https://images.unsplash.com/photo-1700411881984-971bc29083bd?w=1200&h=420&fit=crop&q=78"
+    srcset="https://images.unsplash.com/photo-1700411881984-971bc29083bd?w=800&h=280&fit=crop&q=78 800w,
+            https://images.unsplash.com/photo-1700411881984-971bc29083bd?w=1200&h=420&fit=crop&q=78 1200w"
+    sizes="(max-width: 768px) 100vw, 1160px"
     alt="Tesla Model 3 in ricarica al Supercharger — usa il codice referral nicola722048"
-    loading="lazy" width="1200" height="420" decoding="async">
+    loading="lazy" width="1600" height="560" decoding="async"
+    onerror="this.parentElement.parentElement.style.display='none'">
+</picture>
 </figure>
 
 <!-- Comparison table - High value for SEO and conversion -->
