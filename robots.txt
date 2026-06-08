@@ -5,6 +5,22 @@
 User-agent: *
 Allow: /
 
+# Microsoft / Bing crawlers
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+User-agent: msnbot-media
+Allow: /
+
+User-agent: adidxbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
 # AI / LLM crawlers (GEO – Generative Engine Optimization)
 User-agent: GPTBot
 Allow: /
