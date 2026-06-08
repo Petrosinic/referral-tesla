@@ -1,0 +1,24 @@
+name: IndexNow – Notifica Bing
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ping-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notifica IndexNow
+        run: |
+          curl -s -o /dev/null -w "HTTP %{http_code}\n" \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "referral-tesla.it",
+              "key": "11a61d2f6c484360a4c8959fe1f6a829",
+              "keyLocation": "https://referral-tesla.it/11a61d2f6c484360a4c8959fe1f6a829.txt",
+              "urlList": [
+                "https://referral-tesla.it/"
+              ]
+            }'
