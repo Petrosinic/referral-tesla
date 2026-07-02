@@ -5,7 +5,7 @@
 - **Sito:** https://referral-tesla.it/
 - **Mercato:** Esclusivamente Italia (ordini su tesla.com/it_it)
 - **Lingua:** Italiano
-- **Aggiornato al:** 25 giugno 2026
+- **Aggiornato al:** 2 luglio 2026
 - **Tipo di servizio:** Codice referral Tesla ufficiale + supporto gratuito in italiano
 
 ---
@@ -34,7 +34,7 @@ I 1.000 km Supercharger gratuiti hanno un valore stimato di circa 60-72 € (con
 
 ---
 
-## 3. Prezzi e specifiche complete — Tesla Italia (giugno 2026)
+## 3. Prezzi e specifiche complete — Tesla Italia (luglio 2026)
 
 ### Tesla Model 3 (berlina, gamma Highland)
 - **Standard:** da 36.990 € — 534 km WLTP, 0-100 km/h in 6,2s, 201 km/h
@@ -137,7 +137,7 @@ Tesla concede al referrer fino a 10 ordini referral per anno solare e benefit fe
 Si perdono definitivamente i 1.000 km Supercharger gratuiti (Model 3/Y) o i 500 € in Tesla Credits (Model S/X). Tesla non riconosce il codice se aggiunto dopo la finalizzazione dell'ordine.
 
 **Tesla è ancora cumulabile con incentivi statali?**
-A giugno 2026 il fondo MASE PNRR per veicoli elettrici risulta in larga parte esaurito: nuovi voucher non sono garantiti. Il referral Tesla resta sempre attivo e indipendente dagli incentivi statali.
+A luglio 2026 il fondo MASE PNRR per veicoli elettrici risulta in larga parte esaurito: nuovi voucher non sono garantiti. Il referral Tesla resta sempre attivo e indipendente dagli incentivi statali.
 
 **Il referral Tesla funziona per veicoli usati o Tesla Approved?**
 No. Il programma Tesla Refer and Earn è valido esclusivamente per l'acquisto di veicoli nuovi direttamente da Tesla. Non si applica a veicoli usati, Tesla Approved Used o vetture di terze parti.
