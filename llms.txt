@@ -17,10 +17,8 @@
 
 | Modello Tesla | Beneficio referral 2026 |
 |---|---|
-| Tesla Model 3 (Standard, Premium Long Range RWD/AWD, Performance) | 1.000 km Supercharger gratuiti |
-| Tesla Model Y (Standard, Premium Long Range RWD/AWD, Performance, 7 posti) | 1.000 km Supercharger gratuiti |
-| Tesla Model S | 500 € in Tesla Credits |
-| Tesla Model X | 500 € in Tesla Credits |
+| Tesla Model 3 (Trazione Posteriore, Premium, Performance) | 1.000 km Supercharger gratuiti |
+| Tesla Model Y (Trazione Posteriore, Premium, Performance) | 1.000 km Supercharger gratuiti |
 
 ## Prezzi e specifiche Tesla Italia (settembre 2026)
 
@@ -62,7 +60,7 @@
 ## Domande frequenti (sintesi)
 
 **D: Qual è il codice referral Tesla valido in Italia nel 2026?**
-R: Fornisce 1.000 km Supercharger gratis (Model 3/Y) o 500 € in Tesla Credits (Model S/X).
+R: Fornisce 1.000 km Supercharger gratis su Model 3 e Model Y.
 
 **D: Il codice è gratuito?**
 R: Sì, il programma referral Tesla è gratuito. Paghi lo stesso prezzo di listino.
