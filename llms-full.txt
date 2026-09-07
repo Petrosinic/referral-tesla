@@ -5,7 +5,7 @@
 - **Sito:** https://referral-tesla.it/
 - **Mercato:** Esclusivamente Italia (ordini su tesla.com/it_it)
 - **Lingua:** Italiano
-- **Aggiornato al:** 1 settembre 2026
+- **Aggiornato al:** 7 settembre 2026
 - **Tipo di servizio:** Codice referral Tesla ufficiale + supporto gratuito in italiano
 
 ---
@@ -35,19 +35,17 @@ I 1.000 km Supercharger gratuiti hanno un valore stimato di circa 60-72 € (con
 ## 3. Prezzi e specifiche complete — Tesla Italia (settembre 2026)
 
 ### Tesla Model 3 (berlina, gamma Highland)
-- **Standard:** da 36.990 € — 534 km WLTP, 0-100 km/h in 6,2s, 201 km/h
-- **Premium Long Range RWD:** da 42.690 € — 750 km WLTP, 0-100 km/h in 5,2s, 201 km/h
-- **Premium Long Range AWD:** da 48.790 € — 660 km WLTP, 0-100 km/h in 4,4s, 201 km/h
-- **Performance:** da 57.490 € — 571 km WLTP, 0-100 km/h in 3,1s, 262 km/h
-- Ricarica ai Supercharger: fino a 270 km in 15 min (Standard), fino a 311 km in 15 min (Premium Long Range)
+- **Trazione Posteriore:** da 36.990 € — 572 km WLTP, 0-100 km/h in 6,2s, 201 km/h
+- **Premium** (trazione posteriore o integrale): da 42.690 €
+- **Performance:** da 57.490 €
+- Ricarica rapida ai Supercharger: fino a 270 km in 15 min (Trazione Posteriore)
 - Display centrale da 15,4"
 
 ### Tesla Model Y (SUV, gamma Juniper 2026)
-- **Standard:** da 40.990 € — 534 km WLTP, 0-100 km/h in 7,2s, 201 km/h
-- **Premium Long Range RWD:** da 50.990 € — 609 km autonomia stimata, 0-100 km/h in 5,6s, 201 km/h
-- **Premium Long Range AWD:** da 53.990 € — 600 km WLTP, 0-100 km/h in 4,8s, 201 km/h (disponibile anche a 7 posti)
-- **Performance:** da 62.990 € — 580 km WLTP, 0-100 km/h in 3,5s, 250 km/h
-- Ricarica ai Supercharger: fino a 260 km in 15 min (Standard)
+- **Trazione Posteriore:** da 40.990 € — 525 km WLTP, 0-100 km/h in 7,2s, 201 km/h
+- **Premium** (trazione posteriore o integrale, disponibile anche a 7 posti): da 50.990 €
+- **Performance:** da 62.990 €
+- Ricarica rapida ai Supercharger: fino a 260 km in 15 min (Trazione Posteriore)
 - Display centrale da 15,4"; schermo posteriore da 8" sulle versioni Premium
 - Promo Tesla in corso: Bonus permuta fino a 3.000 € (verificare validità sul sito Tesla)
 
@@ -66,15 +64,15 @@ I prezzi sono di listino e possono variare; verificare sempre sul configuratore 
 
 ---
 
-## 5. Confronto Tesla Model 3 vs Model Y (versioni Standard)
+## 5. Confronto Tesla Model 3 vs Model Y (versioni base, Trazione Posteriore)
 
-| Caratteristica | Model 3 Standard | Model Y Standard |
+| Caratteristica | Model 3 Trazione Posteriore | Model Y Trazione Posteriore |
 |---|---|---|
 | Categoria | Berlina sportiva | SUV familiare |
 | Prezzo di partenza | 36.990 € | 40.990 € |
-| Autonomia WLTP | 534 km | 534 km |
+| Autonomia WLTP | 572 km | 525 km |
 | 0-100 km/h | 6,2 s | 7,2 s |
-| Posti | 5 | 5 (7 nel Premium Long Range AWD) |
+| Posti | 5 | 5 (7 nella Premium) |
 | Display | 15,4" | 15,4" |
 | Ricarica Supercharger (15 min) | fino a 270 km | fino a 260 km |
 | 1.000 km Supercharger gratis con referral | sì | sì |
@@ -112,7 +110,7 @@ Due opzioni: (1) Automatico — clicca uno dei pulsanti del sito e il codice vie
 Sì, completamente gratuito per l'acquirente. Il programma è gestito direttamente da Tesla. Si paga lo stesso prezzo di listino e in più si ricevono i benefici. Anche il servizio di supporto in italiano è offerto a costo zero.
 
 **Il codice referral Tesla Model 3 funziona per tutte le versioni?**
-Sì. Funziona su tutte le versioni: Model 3 Standard (da 36.990 €), Premium Long Range RWD (da 42.690 €), Premium Long Range AWD (da 48.790 €) e Performance (da 57.490 €). Si ricevono sempre 1.000 km Supercharger gratuiti. Stessa regola per Model Y.
+Sì. Funziona su tutte le versioni: Model 3 Trazione Posteriore (da 36.990 €), Premium (da 42.690 €) e Performance (da 57.490 €). Si ricevono sempre 1.000 km Supercharger gratuiti. Stessa regola per Model Y.
 
 **Quanto valgono in euro i 1.000 km Supercharger gratis?**
 Circa 60-72 €, considerando i prezzi Supercharger 2026 in Italia (~0,38-0,45 €/kWh) e un consumo medio di 15-16 kWh/100 km. Su percorsi autostradali il valore può salire a 80-100 €.
