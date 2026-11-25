@@ -10,7 +10,7 @@
 - **Link diretto:** [www.tesla.com/it_it/referral/alessandro680712](https://www.tesla.com/it_it/referral/alessandro680712)
 - **Mercato di validità:** Esclusivamente Italia (tesla.com/it_it)
 - **Lingua supporto:** Italiano
-- **Aggiornato al:** 23 novembre 2026
+- **Aggiornato al:** 25 novembre 2026
 - **Costo per l'acquirente:** 0 € (programma ufficiale Tesla, gratuito)
 
 ## Benefici per modello
@@ -23,11 +23,13 @@
 ## Prezzi e specifiche Tesla Italia (novembre 2026)
 
 - Tesla Model 3 Trazione Posteriore: da 36.990 € (572 km WLTP, 0-100 in 6,2s, 201 km/h)
-- Tesla Model 3 Premium (posteriore o integrale): da 42.690 €
-- Tesla Model 3 Performance: da 57.490 €
+- Tesla Model 3 Premium Long Range RWD: da 42.690 € (750 km WLTP, 0-100 in 5,2s)
+- Tesla Model 3 Premium Long Range AWD: da 48.790 € (trazione integrale)
+- Tesla Model 3 Performance: da 57.490 € (600 km WLTP, 262 km/h, 0-100 in 3,1s)
 - Tesla Model Y Trazione Posteriore: da 40.990 € (525 km WLTP, 0-100 in 7,2s, 201 km/h)
-- Tesla Model Y Premium (posteriore o integrale): da 50.990 €
-- Tesla Model Y Performance: da 62.990 €
+- Tesla Model Y Premium Long Range RWD: da 50.990 € (603 km WLTP, 0-100 in 5,6s)
+- Tesla Model Y Premium Long Range AWD: da 53.990 € (trazione integrale, anche 7 posti)
+- Tesla Model Y Performance: da 62.990 € (580 km WLTP, 250 km/h, 0-100 in 3,5s)
 
 ## Come si attiva il codice referral
 
